@@ -1,0 +1,53 @@
+gitpod /workspace/boutique (main) $ pip3 install django-allauth==0.41.0
+Collecting django-allauth==0.41.0
+  Downloading django-allauth-0.41.0.tar.gz (545 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 545.3/545.3 kB 35.1 MB/s eta 0:00:00
+  Preparing metadata (setup.py) ... error
+  error: subprocess-exited-with-error
+  
+  × python setup.py egg_info did not run successfully.
+  │ exit code: 1
+  ╰─> [6 lines of output]
+      Traceback (most recent call last):
+        File "<string>", line 2, in <module>
+        File "<pip-setuptools-caller>", line 34, in <module>
+        File "/tmp/pip-install-rxuauoaj/django-allauth_10acd2d9181044c6a62c8559fb87ff42/setup.py", line 8, in <module>
+          from setuptools import convert_path, find_packages, setup
+      ImportError: cannot import name 'convert_path' from 'setuptools' (/home/gitpod/.pyenv/versions/3.12.2/lib/python3.12/site-packages/setuptools/__init__.py)
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+error: metadata-generation-failed
+
+× Encountered error while generating package metadata.
+╰─> See above for output.
+
+note: This is an issue with the package mentioned above, not pip.
+hint: See above for details.
+
+
+
+gitpod /workspace/boutique (main) $ pip3 install django-allauth
+Collecting django-allauth
+  Downloading django_allauth-65.3.0.tar.gz (1.5 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.5/1.5 MB 108.6 MB/s eta 0:00:00
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Preparing metadata (pyproject.toml) ... done
+Collecting Django>=4.2.16 (from django-allauth)
+  Downloading Django-5.1.4-py3-none-any.whl.metadata (4.2 kB)
+Requirement already satisfied: asgiref>=3.8.1 in /workspace/.pip-modules/lib/python3.12/site-packages (from django-allauth) (3.8.1)
+Requirement already satisfied: sqlparse>=0.3.1 in /workspace/.pip-modules/lib/python3.12/site-packages (from Django>=4.2.16->django-allauth) (0.5.2)
+Downloading Django-5.1.4-py3-none-any.whl (8.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.3/8.3 MB 220.4 MB/s eta 0:00:00
+Building wheels for collected packages: django-allauth
+  Building wheel for django-allauth (pyproject.toml) ... done
+  Created wheel for django-allauth: filename=django_allauth-65.3.0-py3-none-any.whl size=1657433 sha256=97b8e753466e0f915941eb2e17e348e74b3a8b23e921ff29a811e2f1d9bf8010
+  Stored in directory: /home/gitpod/.cache/pip/wheels/e4/7b/fb/80001e4ece5b1464652fc4649cad2343fdc59c27e3f6cdc7b1
+Successfully built django-allauth
+Installing collected packages: Django, django-allauth
+  Attempting uninstall: Django
+    Found existing installation: Django 3.2.25
+    Uninstalling Django-3.2.25:
+      Successfully uninstalled Django-3.2.25
+Successfully installed Django-5.1.4 django-allauth-65.3.0
