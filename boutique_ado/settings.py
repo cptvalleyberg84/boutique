@@ -195,7 +195,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 if 'USE_AWS' in os.environ:
     # Bucket Configuration:
     AWS_STORAGE_BUCKET_NAME = 'butikadobucket'
-    AWS_S3_REGION = 'eu-north-1'
+    AWS_S3_REGION_NAME = 'eu-north-1'
     AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
     AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
     AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
@@ -203,7 +203,7 @@ if 'USE_AWS' in os.environ:
     # Static Media FIles
     STATICFILES_STORAGE = 'custom_storages.StaticStorage'
     STATICFILES_LOCATION = 'static'
-    SDEFAAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+    DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
     MEDIAFILES_LOCATION = 'media'
 
     #override static and media in prod
